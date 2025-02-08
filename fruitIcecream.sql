@@ -1,0 +1,8 @@
+-- 상반기 주문 정보 테이블
+-- 아이스크림 성분 정보 테이블
+-- 총주문량 > 3000 AND 주성분 = 'fruit_based'
+-- 총주문량 DESC
+SELECT FH.FLAVOR
+FROM FIRST_HALF FH, ICECREAM_INFO II
+WHERE FH.FLAVOR = II.FLAVOR AND TOTAL_ORDER > 3000 AND INGREDIENT_TYPE = 'fruit_based'
+ORDER BY TOTAL_ORDER DESC;
